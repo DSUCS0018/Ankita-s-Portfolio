@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Ankita I B — Full Stack Developer &amp; AI / Python Developer. B.Tech Computer Science at Dayananda Sagar University. Building production-ready applications and AI-driven solutions." />
+  <title>Ankita I B — Full Stack Developer &amp; AI / Python Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Dancing+Script:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script type="module" crossorigin src="/assets/index-B0Dsppv7.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DfklWdxk.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       PRELOADER
+  ════════════════════════════════════════════ -->
+  <div id="loader" class="loader-container">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <div class="loader-text">Loading</div>
+      <div class="progress-bar-bg">
+        <div id="progress-bar" class="progress-bar-fill"></div>
+      </div>
+      <div id="progress-text" class="progress-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       CANVAS — z-index 0, fixed, full-page scrub
+  ════════════════════════════════════════════ -->
+  <div id="scroll-container" class="scroll-container">
+    <canvas id="frame-canvas"></canvas>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       VIGNETTE — z-index 1, fixed dark overlay
+  ════════════════════════════════════════════ -->
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       PAGE CONTENT — z-index 2, normal flow
+  ════════════════════════════════════════════ -->
+  <div id="content">
+
+    <!-- ── NAV ─────────────────────────────── -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner container">
+        <a href="#hero" class="nav-logo" id="nav-logo-link" aria-label="Home">A.IB</a>
+        <div class="nav-links" id="nav-links" role="menubar">
+          <a href="#hero" class="nav-link" role="menuitem">Home</a>
+          <a href="#about" class="nav-link" role="menuitem">About</a>
+          <a href="#experience" class="nav-link" role="menuitem">Experience</a>
+          <a href="#projects" class="nav-link" role="menuitem">Projects</a>
+          <a href="#publications" class="nav-link" role="menuitem">Publications</a>
+          <a href="#contact" class="nav-link" role="menuitem">Contact</a>
+        </div>
+        <a href="#contact" class="btn btn-nav" id="nav-cta">Let's Talk</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── SECTION 0: HERO ────────────────── -->
+    <section id="hero" class="section section--hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+
+        <!-- ─ LEFT COLUMN: all text content + cards ─ -->
+        <div class="hero-left">
+
+          <div class="eyebrow reveal">
+            <span class="dot dot--blue" aria-hidden="true"></span>
+            Full Stack Developer + AI / Python Developer
+          </div>
+
+          <h1 id="hero-heading" class="hero-headline">
+            <span class="headline-line reveal" style="--delay:0.05s">I BUILD.</span>
+            <span class="headline-line reveal" style="--delay:0.15s">I SOLVE.</span>
+            <span class="headline-line headline-line--accent reveal" style="--delay:0.25s">I RESEARCH.</span>
+          </h1>
+
+          <p class="hero-sub reveal" style="--delay:0.3s">
+            I build production-ready applications using modern web technologies and explore AI-driven solutions through
+            Python, computer vision, NLP, and research.
+          </p>
+
+          <!-- Floating info cards (sit inside left column, 2×2 grid) -->
+          <div class="hero-cards reveal" style="--delay:0.35s" aria-label="Skills overview">
+
+            <div class="float-card float-card--blue">
+              <div class="float-card-header">
+                <span class="dot dot--blue" aria-hidden="true"></span>
+                <span class="float-card-label">Full Stack</span>
+              </div>
+              <div class="float-card-tags">
+                <span class="tag tag--blue">React</span>
+                <span class="tag tag--blue">Next.js</span>
+                <span class="tag tag--blue">TypeScript</span>
+                <span class="tag tag--blue">Django</span>
+                <span class="tag tag--blue">REST APIs</span>
+              </div>
+            </div>
+
+            <div class="float-card float-card--red">
+              <div class="float-card-header">
+                <span class="dot dot--red" aria-hidden="true"></span>
+                <span class="float-card-label">AI / Python</span>
+              </div>
+              <div class="float-card-tags">
+                <span class="tag tag--red">Python</span>
+                <span class="tag tag--red">YOLOv8</span>
+                <span class="tag tag--red">Vision Transformer</span>
+                <span class="tag tag--red">spaCy NER</span>
+              </div>
+            </div>
+
+            <div class="float-card float-card--stat">
+              <div class="stat-num" aria-label="3">3</div>
+              <div class="stat-label">Production apps shipped</div>
+            </div>
+
+            <div class="float-card float-card--stat">
+              <div class="stat-num stat-num--sm">Springer</div>
+              <div class="stat-label">Research accepted for publication</div>
+            </div>
+
+          </div><!-- /.hero-cards -->
+
+          <div class="hero-ctas reveal" style="--delay:0.45s">
+            <a href="#projects" class="btn btn-primary" id="hero-cta-work">View My Work</a>
+            <a href="#contact" class="btn btn-outline" id="hero-cta-connect">Let's Connect</a>
+          </div>
+
+          <div class="hero-credential reveal" style="--delay:0.55s">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+            B.Tech Computer Science · Dayananda Sagar University
+          </div>
+
+        </div><!-- /.hero-left -->
+
+        <!-- ─ RIGHT COLUMN: cursive name ─ -->
+        <div class="hero-right" aria-label="Name introduction">
+          <div class="hero-name-script">
+            <span class="script-hello reveal" style="--delay:0.2s">Hello,</span>
+            <span class="script-iam reveal" style="--delay:0.3s">I am</span>
+            <span class="script-firstname reveal" style="--delay:0.4s">Ankita</span>
+            <span class="script-surname reveal" style="--delay:0.5s">I B</span>
+            <div class="script-underline reveal" style="--delay:0.65s" aria-hidden="true"></div>
+          </div>
+        </div><!-- /.hero-right -->
+
+      </div><!-- /.hero-inner -->
+
+      <div class="scroll-hint reveal" style="--delay:0.9s" aria-hidden="true">
+        <span>Scroll to Explore</span>
+        <div class="scroll-hint-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 2: ABOUT ───────────────── -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-visual reveal" aria-hidden="true">
+            <div class="about-portrait-frame">
+              <div class="about-portrait-glow"></div>
+              <div class="about-portrait-content">
+                <img src="/ankita-portrait.jpg" alt="Ankita I B — Full Stack Developer &amp; AI Researcher"
+                  class="about-portrait-img" />
+                <div class="about-portrait-label">
+                  <span class="about-portrait-name">Ankita I B</span>
+                  <span class="about-portrait-sub">Full Stack · AI / Python · Research</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <div class="eyebrow reveal">About</div>
+            <h2 id="about-heading" class="section-heading reveal">
+              Computer Science undergraduate who builds production-ready applications and explores AI.
+            </h2>
+            <p class="body-text reveal" style="--delay:0.05s">
+              Computer Science undergraduate at Dayananda Sagar University with 4 months of software development
+              internship experience building production-ready applications using Java, Python, Next.js, React,
+              PostgreSQL, and Supabase. Experienced in designing scalable web applications, REST APIs, authentication
+              systems, and AI-driven solutions through live client projects and research. Published research in a
+              Springer Conference and solved 150+ LeetCode problems.
+            </p>
+            <div class="tag-row reveal" style="--delay:0.1s">
+              <span class="tag tag--neutral">Full Stack Development</span>
+              <span class="tag tag--neutral">AI / Python</span>
+              <span class="tag tag--neutral">Research Background</span>
+              <span class="tag tag--neutral">Ships production code</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: SKILLS ──────────────── -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="eyebrow reveal">Skills</div>
+        <h2 id="skills-heading" class="section-heading reveal">What I work with</h2>
+
+        <div class="skills-grid">
+
+          <div class="glass-card glass-card--blue skill-card reveal" style="--delay:0s">
+            <div class="skill-card-header">
+              <div class="skill-icon skill-icon--blue" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <span class="skill-title">Frontend</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag--blue">React.js</span>
+              <span class="tag tag--blue">Next.js</span>
+              <span class="tag tag--blue">HTML5</span>
+              <span class="tag tag--blue">CSS3</span>
+              <span class="tag tag--blue">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card--blue skill-card reveal" style="--delay:0.08s">
+            <div class="skill-card-header">
+              <div class="skill-icon skill-icon--blue" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                </svg>
+              </div>
+              <span class="skill-title">Backend</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag--blue">Django</span>
+              <span class="tag tag--blue">REST APIs</span>
+              <span class="tag tag--blue">Supabase</span>
+              <span class="tag tag--blue">Authentication</span>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card--blue skill-card reveal" style="--delay:0.16s">
+            <div class="skill-card-header">
+              <div class="skill-icon skill-icon--blue" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+              </div>
+              <span class="skill-title">Databases</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag--blue">PostgreSQL</span>
+              <span class="tag tag--blue">MySQL</span>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card--red skill-card reveal" style="--delay:0.24s">
+            <div class="skill-card-header">
+              <div class="skill-icon skill-icon--red" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                </svg>
+              </div>
+              <span class="skill-title">AI / Research</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag--red">YOLOv8</span>
+              <span class="tag tag--red">Vision Transformer</span>
+              <span class="tag tag--red">spaCy NER</span>
+              <span class="tag tag--red">Model Benchmarking</span>
+            </div>
+          </div>
+
+          <div class="glass-card glass-card--blue skill-card skill-card--wide reveal" style="--delay:0.32s">
+            <div class="skill-card-header">
+              <div class="skill-icon skill-icon--blue" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                </svg>
+              </div>
+              <span class="skill-title">Tools & Deployment</span>
+            </div>
+            <div class="skill-tags">
+              <span class="tag tag--blue">Git</span>
+              <span class="tag tag--blue">GitHub</span>
+              <span class="tag tag--blue">Vercel</span>
+              <span class="tag tag--blue">Cloudflare Pages</span>
+              <span class="tag tag--blue">WordPress</span>
+              <span class="tag tag--blue">Postman</span>
+              <span class="tag tag--blue">Linux</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="lang-tags reveal" style="--delay:0.1s">
+          <span class="tag tag--lang">Java</span>
+          <span class="tag tag--lang">Python</span>
+          <span class="tag tag--lang">SQL</span>
+          <span class="tag tag--lang">JavaScript</span>
+          <span class="tag tag--lang">TypeScript</span>
+          <span class="tag tag--lang">C</span>
+          <span class="tag tag--lang">VS Code</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 4: EXPERIENCE ──────────── -->
+    <section id="experience" class="section" aria-labelledby="exp-heading">
+      <div class="container">
+        <div class="eyebrow reveal">Experience</div>
+        <h2 id="exp-heading" class="section-heading reveal">Where I've worked</h2>
+
+        <div class="exp-card glass-card glass-card--blue reveal">
+          <div class="exp-card-top">
+            <div class="exp-role-block">
+              <h3 class="exp-role">Software Development Intern — Full Stack</h3>
+              <div class="exp-company">Florix Technologies, Bengaluru</div>
+            </div>
+            <div class="exp-dates">
+              <span class="tag tag--blue">Feb 2026 – Jun 2026</span>
+            </div>
+          </div>
+          <ul class="exp-bullets" aria-label="Responsibilities">
+            <li class="reveal" style="--delay:0.05s">Built and deployed three production-ready client applications using
+              Next.js 14, React, TypeScript, Supabase and PostgreSQL.</li>
+            <li class="reveal" style="--delay:0.1s">Developed Arambha LMS with authentication, SSR, reusable UI
+              components, dynamic routing and GitHub CI/CD deployment achieving Lighthouse score above 85 and SEO above
+              90.</li>
+            <li class="reveal" style="--delay:0.15s">Built CA-Poojari education platform featuring webinar registration,
+              community discussions, role-based authentication and dynamic course management.</li>
+            <li class="reveal" style="--delay:0.2s">Designed PostgreSQL schemas, integrated REST APIs, implemented RBAC
+              and developed secure admin dashboards with complete CRUD functionality.</li>
+            <li class="reveal" style="--delay:0.25s">Delivered Handwriting.in marketing website using WordPress
+              including custom themes, DNS configuration, nameserver migration and production deployment.</li>
+            <li class="reveal" style="--delay:0.3s">Successfully delivered all three client projects which passed
+              production acceptance testing.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5: PROJECTS ────────────── -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="eyebrow reveal">Projects</div>
+        <h2 id="projects-heading" class="section-heading reveal">Things I've built</h2>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: AI / Research -->
+          <div class="project-card glass-card glass-card--red reveal" style="--delay:0s">
+            <div class="project-type-row">
+              <span class="dot dot--red" aria-hidden="true"></span>
+              <span class="project-type-label">AI / Research</span>
+            </div>
+            <h3 class="project-name">Automated Leukemia Detection</h3>
+            <p class="project-sub">YOLOv8 + Vision Transformer</p>
+            <p class="project-hook">Built an end-to-end AI pipeline for blood smear analysis achieving F1-score of 0.87
+              with 89% precision and 85% recall.</p>
+            <div class="project-metrics">
+              <span class="metric-badge metric-badge--red">F1-score 0.87</span>
+              <span class="metric-badge metric-badge--red">89% precision</span>
+              <span class="metric-badge metric-badge--red">85% recall</span>
+              <span class="metric-badge metric-badge--red">~70% less manual review</span>
+            </div>
+            <div class="project-tags">
+              <span class="tag tag--red">YOLOv8</span>
+              <span class="tag tag--red">Vision Transformer</span>
+              <span class="tag tag--red">Model Benchmarking</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Engineering -->
+          <div class="project-card glass-card glass-card--blue reveal" style="--delay:0.1s">
+            <div class="project-type-row">
+              <span class="dot dot--blue" aria-hidden="true"></span>
+              <span class="project-type-label">Engineering</span>
+            </div>
+            <h3 class="project-name">Task Dependency Management System</h3>
+            <p class="project-hook">Developed a Django and PostgreSQL based task management system with 12 REST API
+              endpoints.</p>
+            <div class="project-metrics">
+              <span class="metric-badge metric-badge--blue">12 REST API endpoints</span>
+            </div>
+            <div class="project-tags">
+              <span class="tag tag--blue">Django</span>
+              <span class="tag tag--blue">PostgreSQL</span>
+              <span class="tag tag--blue">pytest</span>
+            </div>
+          </div>
+
+          <!-- Project 3: AI / Research -->
+          <div class="project-card glass-card glass-card--red reveal" style="--delay:0.2s">
+            <div class="project-type-row">
+              <span class="dot dot--red" aria-hidden="true"></span>
+              <span class="project-type-label">AI / Research</span>
+            </div>
+            <h3 class="project-name">HealthNER</h3>
+            <p class="project-sub">Medical Named Entity Recognition</p>
+            <p class="project-hook">Fine-tuned a spaCy NER model achieving F1-score of 0.83 across six medical entity
+              classes.</p>
+            <div class="project-metrics">
+              <span class="metric-badge metric-badge--red">F1-score 0.83</span>
+              <span class="metric-badge metric-badge--red">6 entity classes</span>
+            </div>
+            <div class="project-tags">
+              <span class="tag tag--red">spaCy</span>
+              <span class="tag tag--red">Streamlit</span>
+              <span class="tag tag--red">NLP</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 6: PUBLICATIONS ────────── -->
+    <section id="publications" class="section" aria-labelledby="pub-heading">
+      <div class="container">
+        <div class="eyebrow reveal">Research</div>
+        <h2 id="pub-heading" class="section-heading reveal">Published work</h2>
+
+        <div class="pub-card glass-card glass-card--red reveal">
+          <div class="pub-badge">
+            <span class="dot dot--red" aria-hidden="true"></span>
+            <span>Springer Conference</span>
+          </div>
+          <h3 class="pub-title">
+            Automated Leukemia Detection using YOLOv8 and Vision Transformer
+          </h3>
+          <div class="pub-status">
+            <span class="tag tag--red">Accepted for publication</span>
+          </div>
+          <p class="body-text">
+            Contributed to literature survey, methodology, experimentation, comparative evaluation and manuscript
+            preparation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 7: ACHIEVEMENTS ────────── -->
+    <section id="achievements" class="section section--achievements" aria-labelledby="ach-heading">
+      <div class="container">
+        <div class="eyebrow reveal">Recognition</div>
+        <h2 id="ach-heading" class="section-heading reveal">Achievements</h2>
+        <div class="achievement-row reveal" style="--delay:0.1s">
+          <div class="achievement-pill">
+            <span class="achievement-icon" aria-hidden="true"></span>
+            <span>Co-authored a research paper accepted at a Springer Conference</span>
+          </div>
+          <div class="achievement-pill">
+            <span class="achievement-icon" aria-hidden="true"></span>
+            <span>Built and deployed 3 production-ready client applications</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 8: CONTACT ─────────────── -->
+    <section id="contact" class="section section--contact" aria-labelledby="contact-heading">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container contact-inner">
+
+        <h2 id="contact-heading" class="contact-heading reveal">Let's build something.</h2>
+        <p class="contact-sub reveal" style="--delay:0.1s">
+          Open to full-stack development, frontend engineering, AI/Python and software engineering opportunities —
+          always happy to talk technology, research, or interesting problems.
+        </p>
+
+        <nav class="contact-links reveal" style="--delay:0.2s" aria-label="Contact links">
+          <a href="mailto:ankitabellad88@gmail.com" class="contact-link" id="contact-email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            ankitabellad88@gmail.com
+          </a>
+          <a href="tel:+917338044804" class="contact-link" id="contact-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.41 2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            +91 7338044804
+          </a>
+          <a href="https://linkedin.com/in/ankitabellad" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-linkedin">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/DSUCS0018" target="_blank" rel="noopener noreferrer" class="contact-link"
+            id="contact-github">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            GitHub
+          </a>
+        </nav>
+
+        <a href="mailto:ankitabellad88@gmail.com" class="btn btn-cta reveal" style="--delay:0.3s" id="cta-letstalk">
+          Let's Talk
+        </a>
+
+        <footer class="footer-line reveal" style="--delay:0.4s">
+          Ankita I B · B.Tech Computer Science and Engineering, Dayananda Sagar University · Bengaluru, India
+        </footer>
+
+      </div>
+    </section>
+
+  </div><!-- /#content -->
+
+</body>
+
+</html>
