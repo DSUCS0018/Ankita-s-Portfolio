@@ -3,7 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  },
   "scripts": {
+    "prebuild": "npm ci --include=dev",
     "dev": "vite --host 0.0.0.0 --port 3000",
     "build": "vite build",
     "preview": "vite preview"
