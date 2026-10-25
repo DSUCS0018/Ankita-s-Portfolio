@@ -1223,6 +1223,29 @@ canvas {
   flex: 1;
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.02);
+  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+}
+
+.project-link:hover {
+  border-color: rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-1px);
+}
+
 .project-metrics {
   display: flex;
   flex-wrap: wrap;
