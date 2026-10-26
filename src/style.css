@@ -1118,21 +1118,21 @@ canvas {
    SECTION 4 — EXPERIENCE
    ══════════════════════════════════════════════════════════ */
 
-.exp-card {
+.experience-card {
   max-width: 900px;
 }
 
-.exp-card-top {
+.experience-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 24px;
-  margin-bottom: 30px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--glass-border);
 }
 
-.exp-role {
+.experience-role {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -1141,36 +1141,47 @@ canvas {
   letter-spacing: 0.3px;
 }
 
-.exp-company {
+.experience-company {
   font-size: 14px;
   color: var(--text-muted);
   font-weight: 500;
 }
 
-.exp-bullets {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.experience-date {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 1.6;
 }
 
-.exp-bullets li {
-  font-size: 15px;
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-list li {
+  font-size: 14px;
   line-height: 1.7;
   color: var(--text-muted);
-  padding-left: 22px;
+  padding-left: 18px;
   position: relative;
 }
 
-.exp-bullets li::before {
+.experience-list li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 9px;
-  width: 5px;
-  height: 5px;
+  top: 10px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: var(--blue);
-  box-shadow: 0 0 6px rgba(59,130,246,0.7);
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -1500,7 +1511,7 @@ canvas {
   .projects-grid { grid-template-columns: 1fr; }
 
   /* Experience */
-  .exp-card-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .experience-header { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
 
 @media (max-width: 520px) {
